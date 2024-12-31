@@ -74,7 +74,7 @@ def main():
         else:
             print("Invalid option. Please try again.")
 
-        time.sleep(3)
+        # time.sleep(10)
 
 if __name__ == "__main__":
     main()
