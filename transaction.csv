@@ -1,0 +1,10 @@
+CustomerID,TransactionType,Amount,NewBalance
+
+101,The amount deposited: ,200.0,4855.23
+101,The amount deposited: ,200.0,4812.469999999999
+102,The amount deposited: ,200.0,3200.0
+102,The amount deposited: ,200.0,3400.0
+102,The amount deposited: ,200.0,3200.0
+104,Withdrawal,-500.0,2000.0
+102,The amount deposited: ,200.0,3400.0
+102,The amount deposited: ,300.0,3700.0

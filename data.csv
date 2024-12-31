@@ -1,0 +1,8 @@
+CustomerID,Name,AccountBalance,AccountType
+101,John Doe,5000.00,Savings
+102,Jane Smith,3700.0,Current
+103,Alice Johnson,7000.00,Savings
+104,Bob Brown,2000.0,Current
+105,Devangi,1100.0,current
+106,Reya,9765.0,current
+107,Tarun,8900.0,current
