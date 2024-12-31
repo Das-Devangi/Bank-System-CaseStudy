@@ -25,7 +25,7 @@ class BankSys:
             while True:
                 for customer in self.customers.values():
                     if customer.acc_type == 'Savings':
-                        customer.interest_count()  
+                        customer.apply_interest()  
                 time.sleep(3600) 
 
         # Creating and starting the thread

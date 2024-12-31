@@ -12,24 +12,24 @@ class Customer_Account:
     # Deposit function for money deposit by the customers
     def deposit(self, amount, cus_passbook):
         with self.lock:
-            self.acc_bal += round(amount, 2)  # Add deposit amount
-            cus_passbook.update_bal(self.cus_id, self.acc_bal)  # Update balance in CSV
+            self.acc_bal += round(amount, 2)  
+            cus_passbook.update_bal(self.cus_id, self.acc_bal)  
             self.log_trans("The amount deposited: ", amount)
             return "Deposited amount is: {:.2f}\nNew balance is: {:.2f}".format(amount, self.acc_bal)
 
     # Withdraw function to withdraw amount from customer's account
     def withdraw(self, amount, cus_passbook):
         with self.lock:
-            if self.acc_bal >= amount:  # Check if there are enough funds
-                self.acc_bal -= round(amount, 2)  # Subtract the withdrawal amount
-                cus_passbook.update_bal(self.cus_id, self.acc_bal)  # Update balance in CSV
+            if self.acc_bal >= amount:  
+                self.acc_bal -= round(amount, 2)  
+                cus_passbook.update_bal(self.cus_id, self.acc_bal)  
                 self.log_trans("Withdrawal", -amount)
                 return "Amount withdrawn is: {:.2f}\nNew balance is: {:.2f}".format(round(amount, 2), self.acc_bal)
             else:
                 return "Cannot withdraw insufficient funds. Please recheck the Balance"
 
     # Creating a function to calculate interest
-    def interest_count(self):
+    def apply_interest(self):
         with self.lock:
             if self.acc_type == 'Savings':
                 interest = round(self.acc_bal * 0.05, 2)
